@@ -6,10 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="crea-logo.png" />
     <title>Crea Luxuy Metal Decors</title>
+    <link rel="stylesheet" href="site.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCRxb8Pi93ckzdOUMK9elDxth2eSzoEbec",
+            authDomain: "crealmd-1ccf2.firebaseapp.com",
+            projectId: "crealmd-1ccf2",
+            storageBucket: "crealmd-1ccf2.appspot.com",
+            messagingSenderId: "964042766381",
+            appId: "1:964042766381:web:a4f1425cd5456e18f9a0a4",
+            measurementId: "G-5LPXZDJ3WF"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        console.log(firebase);
+
+        var database = firebase.database();
+        var ref = database.ref('subscriptions');
+
+        var data = {
+            email: "abc@gmail.com"
+        }
+        ref.push(data);
+    </script>
 </head>
 
 <body>
-    Awesome
+    <article id="home" a name="home">
+        <div class="wrapper content">
+            <h1>We&rsquo;ll be back soon!</h1>
+            <p>
+                If you need to you can always <a href="mailto:crealuxurymetaldecor@gmail.com">contact us</a>,
+            </p>
+            <p>
+                Otherwise please leave us your email id and we will notify you!
+            </p>
+            <p style="color: rgb(113, 81, 2);">&mdash; Team CREA</p>
+
+            <form action="/action_page.php">
+                <input type="email" id="fname" name="emailId" placeholder="email">
+
+                <input type="submit" value="Notify">
+            </form>
+        </div>
+    </article>
 </body>
 
 </html>

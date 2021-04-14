@@ -21,7 +21,8 @@ html {
     color: -webkit-linear-gradient(45deg, #9e9027, #e6cb00);
     color: goldenrod;
     font-family: Conv_SamarkanNormal-RXGE;
-    /* bottom: 10px; */
+    padding-top: 10px;
+    font-size: 1.5rem;
 }
 
 
